@@ -1,0 +1,148 @@
+﻿@background: #f3f4eb;
+@strong: #412917;
+@moderate: #eaeadf;
+@light: #f3f4ec;
+@border: #cbc5c0;
+@grayish: #dedede;
+@secondary_light: #58af48;
+@secondary_moderate: #67b053;
+@secondary_strong: #429334;
+@green_strongest: #027902;
+@auxiliary: #fabe28;
+@yellow_light: #e8f0ca;
+@pink: #e92c6c;
+@red: #d11911;
+@red_shadow: #7a0000;
+@blue_light: #a4d4e6;
+
+.box-gradient(@top, @bottom) {
+  background-color: @bottom;
+  .box-gradient-image(@top, @bottom);
+}
+
+.box-gradient-image(@top, @bottom) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@top), to(@bottom)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, @top, @bottom); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, @top, @bottom); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, @top, @bottom); /* IE10 */
+  background-image:      -o-linear-gradient(top, @top, @bottom); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, @top, @bottom);
+}
+
+.box-radius(@radius) {
+  -webkit-border-radius: @radius; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+  -moz-border-radius: @radius; /* FF1-3.6 */
+  border-radius: @radius; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
+
+/* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.box-shadow(@rule) {
+  -webkit-box-shadow: @rule; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: @rule; /* FF3.5 - 3.6 */
+  box-shadow: @rule; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+
+.box-shadow-dual(@first,@second) {
+  -webkit-box-shadow: @first,@second; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: @first,@second; /* FF3.5 - 3.6 */
+  box-shadow: @first,@second; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+
+.box-transition(@rule) {
+  -webkit-transition: @rule;  /* Safari 3.2+, Chrome */
+  -moz-transition: @rule;  /* Firefox 4-15 */
+  -o-transition: @rule;  /* Opera 10.5–12.00 */
+  transition: @rule;  /* Firefox 16+, Opera 12.50+ */
+}
+
+.box-transform(@rule){
+  -webkit-transform: @rule;
+  -moz-transform: @rule;
+  -ms-transform: @rule;
+  -o-transform: @rule;
+  transform: @rule;
+}
+
+.transform-origin(@x, @y){
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin: @x @y;
+  -ms-transform-origin: @x @y;
+  -o-transform-origin: @x @y;
+  transform-origin: @x @y;
+}
+
+.transform-to(@target){
+  -webkit-transform: rotate(@target);
+  -moz-transform: rotate(@target);
+  -ms-transform: rotate(@target);
+  -o-transform: rotate(@target);
+  transform: rotate(@target);
+}
+
+.animation(@rule){
+  -webkit-animation: @rule;
+  -moz-animation: @rule;
+  -ms-animation: @rule;
+  -o-animation: @rule;
+  animation: @rule;
+}
+
+.animation-dbl(@first,@second){
+  -webkit-animation: @first, @second;
+  -moz-animation: @first, @second;
+  -ms-animation: @first, @second;
+  -o-animation: @first, @second;
+  animation: @first, @second;
+}
+
+.box-perspective(@amount){
+  -webkit-perspective: @amount;  /* Safari 4+ Chrome 12+ */
+     -moz-perspective: @amount;  /* Firefox 10+ */
+      -ms-perspective: @amount;  /* IE10+ */
+          perspective: @amount;
+}
+
+.box-sizing(){
+  -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+     -moz-box-sizing: border-box; /* Firefox 1+ */
+          box-sizing: border-box; /* Chrome, IE8+, Opera, Safari 5.1*/
+}
+
+.box-3d(){
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.box-flip-x(@angle:-180deg){
+  -webkit-transform: rotateX(@angle);
+  -moz-transform: rotateX(@angle);
+  -ms-transform: rotateX(@angle);
+  transform: rotateX(@angle);
+}
+
+.box-flip-y(@angle:180deg){
+  -webkit-transform: rotateY(@angle);
+  -moz-transform: rotateY(@angle);
+  -ms-transform: rotateY(@angle);
+  transform: rotateY(@angle);
+}
+
+.box-flip-z(@angle:-180deg){
+  -webkit-transform: rotateZ(@angle);
+  -moz-transform: rotateZ(@angle);
+  -ms-transform: rotateZ(@angle);
+  transform: rotateZ(@angle);
+}
+
+.box-hide-backface(){
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
