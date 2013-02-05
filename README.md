@@ -1,7 +1,7 @@
 Hint.LESS
 =========
 
-Extracted from the source code in NBrut, and originally forked from [hint.css](https://github.com/chinchang/hint.css).
+Extracted from the source code in [**NBrut**](https://github.com/bevacqua/NBrut), and originally forked from [hint.css](https://github.com/chinchang/hint.css).
 
 **Hint.LESS** is a LESS-CSS tool tip stylesheet.
 
